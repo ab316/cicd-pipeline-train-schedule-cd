@@ -21,6 +21,7 @@ pipeline {
                 failOnError: true,
                 publishers: [
                   sshPublisherDesc(
+                    verbose: true,
                     configName: 'staging',
                     sshCredentials: [username: "$USERNAME", encryptedPassphrase: "$PASSWORD"],
                     transfers: [
